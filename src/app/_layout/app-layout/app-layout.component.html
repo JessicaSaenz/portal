@@ -1,0 +1,103 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened>
+        <div id="scroll-area" class="navigation-hold" fxLayout="column">
+            <!-- App Logo -->
+            <div class="branding">
+                <img src="assets/images/logo.png" alt="" class="app-logo">
+            </div>
+        </div>
+        <mat-nav-list>
+            <div class="sidebar-panel">
+                <div class="app-user">
+                    <div class="app-user-photo">
+                        <img alt src="./../assets/images/perfil.jpg">
+                    </div>
+                    <div class="mb-05">
+                        <span class="app-user-name">
+                            <mat-icon class="icon-xs text-muted mat-icon material-icons" role="img" aria-hidden="true">
+                                person
+                            </mat-icon>email
+                        </span>
+                    </div>
+                    <div class="mb-05">
+                        <span class="app-user-name">
+                            <mat-icon class="icon-xs text-muted mat-icon material-icons" role="img" aria-hidden="true">
+                                lock
+                            </mat-icon>
+                            <span>Description</span>
+                        </span>
+                    </div>
+                    <div class="app-user-controls">
+                        <button aria-haspopup="true" class="text-muted mat-icon-button" mat-icon-button=""
+                            mat-xs-button="">
+                            <span class="mat-button-wrapper">
+                                <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">settings
+                                </mat-icon>
+                            </span>
+                        </button>
+                        <button class="text-muted mat-icon-button" mat-icon-button="" mat-xs-button=""
+                            mattooltip="Inbox" routerlink="/inbox" tabindex="0"
+                            aria-describedby="cdk-describedby-message-0" cdk-describedby-host=""
+                            style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span
+                                class="mat-button-wrapper">
+                                <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">email</mat-icon>
+                            </span>
+                        </button>
+                        <button class="text-muted mat-icon-button" mat-icon-button="" mat-xs-button=""
+                            mattooltip="Sign Out" routerlink="/signin" tabindex="0"
+                            aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""
+                            style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span
+                                class="mat-button-wrapper">
+                                <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">exit_to_app
+                                </mat-icon>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+                <h2 matSubheader>Main Menu</h2>
+                <mat-list-item class="parent">
+                    <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">home
+                    </mat-icon>
+                    <a href="/home">Home</a>
+                </mat-list-item>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button mat-icon-button>
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>Portal</span>
+                <div fxFlex fxLayout fxLayoutAlign="flex-end">
+                    <ul fxLayout fxLayoutGap="20px">                        
+                        <li fxHide.xs>
+                            <button mat-icon-button>
+                                <mat-icon>settings</mat-icon>
+                            </button>
+                        </li>
+                        <li fxHide.xs>
+                            <button mat-icon-button>
+                                <mat-icon>help_outline</mat-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button mat-icon-button [matMenuTriggerFor]="auth">
+                                <mat-icon>person_outline</mat-icon>
+                            </button>
+                            <mat-menu #auth="matMenu">
+                                <button mat-menu-item (click)="logout()">
+                                    <mat-icon>exit_to_app</mat-icon>
+                                    <span>Sign out</span>
+                                </button>
+                            </mat-menu>
+                        </li>
+                    </ul>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

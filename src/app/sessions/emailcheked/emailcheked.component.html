@@ -1,0 +1,16 @@
+<div class="page-wrap">
+    <div class="emailcheked-form-hold" *ngIf="showmsg">
+      <mat-card>
+        <mat-card-content>
+          <div class="text-center pb-1"> 
+            <p class="text-light" style="font-size: 25px"> 
+                <mat-icon *ngIf="error">error_outline</mat-icon>
+                <mat-icon *ngIf="!error">info</mat-icon>
+              {{msg}}
+            </p> 
+            <a *ngIf="cheked" href="/signin">Sign in</a>   
+          </div>        
+        </mat-card-content>
+      </mat-card>   
+    </div>  
+  </div> 

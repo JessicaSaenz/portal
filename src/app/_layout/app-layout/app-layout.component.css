@@ -1,0 +1,134 @@
+/*---Sidenav---*/
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+  }
+
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover,
+  a:active {
+    color: lightgray;
+  }
+    
+  .navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .icon {
+    display: inline-block;
+    height: 30px;
+    margin: 0 auto;
+    padding-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 15%;
+  }
+  
+  .label {
+    display: inline-block;
+    line-height: 30px;
+    margin: 0;
+    width: 85%;
+  }
+
+  .mat-sidenav-container  ul{
+    list-style-type: none; 
+  }
+
+  .app-logo{
+      width: auto;
+  }
+
+  .branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 15rem;
+    height: 64px;
+    line-height: 64px;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    color: #444;
+    transition-delay: 0s;
+    transition: all .3s cubic-bezier(.35,0,.25,1);
+    -webkit-transition: .3s cubic-bezier(.35,0,.25,1);
+}
+.sidebar-panel{
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,.95);
+    left: 0;
+    transition: all .3s cubic-bezier(.35,0,.25,1)
+}
+
+/*-- Perfil--*/
+.app-user {
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0 .4rem;
+}
+
+.app-user .app-user-photo {
+    width: 72px;
+    margin: 0 auto 8px;
+    height: 72px;
+    box-sizing: border-box;
+    border: 1px solid rgba(120,130,140,.13);
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.app-user img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/*-- Sidenav --*/
+.example-container {
+  height: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.example-sidenav {
+   user-select: none;
+}
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.companiesSubMenu,.usersSubMenu,.exampleSubMenu{
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+.companiesSubMenu.expanded, .usersSubMenu.expanded, .exampleSubMenu.expanded{
+  transform: scaleY(1);
+}

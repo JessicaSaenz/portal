@@ -1,0 +1,155 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+/*@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';*/
+/*@import '~@angular/material/prebuilt-themes/purple-green.css';*/
+
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: arial,sans-serif;
+}
+.page-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('assets/images/background-login.jpg');
+}
+
+/*---- Common -----*/
+.text-center {
+    text-align: center;
+}
+
+.pb-1 {
+    padding-bottom: 1rem !important;
+}
+
+.mb-1 {
+    margin-bottom: 1rem !important;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+a,a:focus,a:hover{
+    text-decoration:none
+}
+a {
+color:inherit;
+}
+
+.mb-05 {
+    margin-bottom: .5rem!important;
+}
+
+.cs-errormessage{
+    text-align: center;
+    font-size: medium;
+    color: red;
+}
+
+
+/*---- Sessions -----*/
+.cs-sessions-forms{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cs-sessions-forms > .mat-card {
+    margin: 0;
+}
+
+.cs-ngxcaptcha iframe{
+    margin: 10px 20px 15px !important;
+}
+
+.cs-signin {
+    background-color: #0052a0 !important;
+    margin: 10px 0 15px !important;
+}
+
+.cs-forgotpass {
+    background-color: #e50914 !important;
+    margin: 10px 0 15px !important;
+}
+
+.cs-signup {
+    background-color: #0052a0 !important;
+    margin: 20px 0 15px !important;
+}
+
+/*Home*/
+.mat-toolbar.mat-primary {
+    background: #004e9e;
+    color: #fff;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.subcontainer{
+   margin: 20px 
+}
+
+.minicontainers{
+    margin: auto 20px;
+}
+
+.text-muted {
+    color: rgba(0,0,0,.54)!important;
+}
+
+.font-reports {
+    font-weight: 400!important;
+    font-size: 1.75rem;
+    margin: 0!important;
+}
+
+/*---- Forms -----*/
+.cs-forms{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cs-short-forms {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cs-half-forms{
+    margin: auto 10px
+}
+
+/*--- Icons ---*/
+.material-icons.icon-xs {
+    font-size: 13px!important;
+    line-height: 13px;
+    height: 13px;
+    width: 13px;
+}
+
+.mat-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+}
+
+/*-- Table --*/
+table {
+    margin-top: 20px;
+    width: 100%;
+  }

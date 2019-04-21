@@ -1,0 +1,25 @@
+  table {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .tree{
+    margin-top: 20px;
+  }
+
+  .mat-chip{
+    padding: 4px 6px!important;
+    border-radius: 4px!important;
+    font-size: 12px!important;
+    line-height: 12px!important;
+    max-height: 20px;
+    box-sizing: border-box;    
+  }
+
+.active{
+  background-color: green !important
+}
+
+.pending{
+  background-color: red !important
+}

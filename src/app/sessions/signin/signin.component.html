@@ -1,0 +1,47 @@
+  <div class="page-wrap">
+    <div class="cs-sessions-forms">   
+      <mat-card>
+        <mat-card-content> 
+          <div fxLayout="column">
+            <form [formGroup]="signinForm" (submit)="signin()"> 
+              <div class="text-center pb-1">
+                <a [routerLink]="['/']"><img src="assets/images/logo.png" alt="Logo"></a> 
+              </div>  
+              <div *ngIf="errorMessage" class="cs-errormessage">
+                <div class="ui-message-icon"></div>            
+                <div class="ui-message-contents">{{errorMessage}}</div>
+              </div>       
+              <div>
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Email" name="email" [formControl]="signinForm.controls['email']" value="">
+                  <mat-error *ngIf="signinForm.controls['email'].hasError('email')">Invalid email</mat-error>
+                  <mat-error *ngIf="signinForm.controls['email'].hasError('required')">Email is <strong>required</strong></mat-error>
+                </mat-form-field>  
+              </div>
+              <div>
+                  <mat-form-field class="full-width">
+                  <input matInput placeholder="Password" name="password" type="password" [formControl]="signinForm.controls['password']" value="">
+                  <mat-error *ngIf="signinForm.controls['email'].hasError('required')">Password is <strong>required</strong></mat-error>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-checkbox  name="rememberMe" [formControl]="signinForm.controls['rememberMe']">Remember me</mat-checkbox>          
+              </div>
+              <div>
+                <button mat-raised-button class="mat-primary full-width cs-signin" [disabled]="signinForm.invalid" (click)="signin()">Sign in</button>               
+              </div>
+              <div class="text-center pb-1">
+                <a [routerLink]="'/forgot-password'" class="mat-primary text-center full-width">Forgot password</a>
+              </div>            
+              <!--<div fxLayout="row" class="text-center">            
+                <div fxFlex="50"> <a [routerLink]="'/forgot-password'" class="mat-primary text-center full-width">Forgot password</a></div>
+                <span fxFlex></span>
+                <div fxFlex="50"> <a [routerLink]="'/signup'" class="mat-primary text-center full-width">Create a new account</a></div>                 
+              </div>-->
+            </form>
+          </div>  
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+    
